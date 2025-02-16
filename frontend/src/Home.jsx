@@ -1,7 +1,9 @@
+import IntroCard from "./components/IntroCard";
+
 function Home() {
   return (
-    <div class="text-3xl">
-      <div></div>
+    <div className="flex justify-center mt-30">
+      <IntroCard />
     </div>
   );
 }
