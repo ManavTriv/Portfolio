@@ -1,13 +1,7 @@
-import '../styles/introCard.css'
-
 function IntroCard() {
   return (
-    <div className="absolute">
-      <div className='absolute inset-0 justify-center'>
-        <div className='bg-shape1 bg-teal opacity-50 bg-blur'>
-
-        </div>
-      </div>
+    <div className="flex justify-center">
+      <div className="h-150 w-[90%] 2xl:max-w-[1350px] rounded-[60px] bg-fuchsia-100"></div>
     </div>
   );
 }
