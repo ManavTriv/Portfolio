@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
 @theme {
-    --color-darkpurple: #412234;
-    --color-plum: #7F457F;
-    --color-khaki: #C9B79C;
     --font-secondary: "Encode Sans Semi Expanded", serif;
 }
