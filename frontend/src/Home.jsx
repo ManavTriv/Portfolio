@@ -1,43 +1,37 @@
-import IntroCard from "./components/IntroCard";
-import Button from "./components/Button";
-import TextScroll from "./components/TextScroll";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
 import "./styles/Home.css"
+import IntroCard from "./components/IntroCard";
 
 const Home = () => {
-
-  function clicked() {
-    alert("you clicked me")
-  }
-
-  return (
-    <div>
-      <div className="flex flex-col w-screen justify-center items-center">
-        <div className="px-8 xl:h-25 lg:h-25 md:h-25 h-27 w-[90%] 2xl:max-w-[1350px] flex items-center flex-col place-content-center space-y-2 md:justify-between md:flex-row md:space-y-0">
-          <Name />
-          <div className="flex flex-row space-x-2">
-            <Button label={"About"} onClick={clicked} />
-            <Button label={"Experience"} onClick={clicked} />
-            <Button label={"Projects"} onClick={clicked} />
-          </div>
+    return (
+      <div className="bg-[#fffefb] min-h-screen">
+        <div className="absolute top-[7%] left-[25%] w-[15%] h-[20%] bg-gradient-to-r from-indigo-400 to-indigo-100 opacity-40 rounded-full blur-3xl"></div>
+        <div className="absolute top-[50%] right-[25%] w-[15%] h-[20%] bg-gradient-to-r from-blue-400 to-indigo-100 opacity-40 rounded-full blur-3xl"></div>
+        <div className="flex flex-col w-[90%] xl:max-w-[1100px] items-center justify-center mx-auto">
+          <Navbar />
+          <IntroCard />
+          <div className="w-full border-t-1"></div>
         </div>
       </div>
-      <IntroCard />
-      <TextScroll />
-      <div className="flex flex-col space-y-15">
-        <About />
-        <Experience />
-        <Projects />
+    );
+}
+
+export default Home
+
+const Navbar = () => {
+    return (
+      <div className="flex flex-row items-center justify-between w-full h-23 px-8">
+        <a className="font-secondary font-medium text-center text-lg cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300">
+          manav trivedi ☃️
+        </a>
+        <div className="flex flex-row space-x-3">
+          <a className="font-secondary font-medium text-lg underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300">
+            about
+          </a>
+          <span className="font-secondary text-lg">/</span>
+          <a className="font-secondary font-medium text-lg underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300">
+            projects
+          </a>
+        </div>
       </div>
-      <TextScroll />
-    </div>
-  );
-}
-
-export default Home;
-
-const Name = () => {
-  return <h1 className="text-2xl font-secondary">Manav Trivedi</h1>;
-}
+    );
+} 
