@@ -6,6 +6,8 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Navbar from "./components/Navbar";
 
+const SectionDivider = () => <div className="w-full border-t-1 mt-3" />;
+
 const Home = () => {
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
@@ -13,21 +15,17 @@ const Home = () => {
   const [navbarScrolled, setNavbarScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setNavbarScrolled(window.scrollY > 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const handleScroll = () => setNavbarScrolled(window.scrollY > 0);
+    const debouncedScroll = debounce(handleScroll, 100);
+    window.addEventListener("scroll", debouncedScroll);
+    return () => window.removeEventListener("scroll", debouncedScroll);
   }, []);
 
   const scrollToSection = (ref) => {
     if (ref?.current) {
       const navbarHeight = 80; 
       const offset = ref.current.offsetTop - navbarHeight;
-      window.scrollTo({
-        top: offset,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: offset, behavior: "smooth" });
     }
   };
 
@@ -36,7 +34,9 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-[#fffefb] min-h-screen relative">
+    <div className="bg-[#fffefb] min-h-screen relative overflow-hidden">
+      <div className="blob blob-1" />
+      <div className="blob blob-2" />
 
       <Navbar
         scrolled={navbarScrolled}
@@ -46,23 +46,31 @@ const Home = () => {
         handleHomeClick={handleHomeClick}
       />
 
-      <div className="flex flex-col w-[90%] xl:max-w-[1100px] items-center justify-center mx-auto pt-20">
+      <div className="flex flex-col w-[90%] xl:max-w-[1100px] items-center justify-center mx-auto pt-10 md:pt-20 relative z-10">
         <IntroCard />
-        <div className="w-full border-t-1 mt-3"></div>
-        <div ref={aboutRef} className="scroll-mt-20">
+        <SectionDivider />
+        <div ref={aboutRef} className="scroll-mt-10 md:scroll-mt-20">
           <About />
         </div>
-        <div className="w-full border-t-1 mt-3"></div>
-        <div ref={experienceRef} className="scroll-mt-20">
+        <SectionDivider />
+        <div ref={experienceRef} className="scroll-mt-10 md:scroll-mt-20">
           <Experience />
         </div>
-        <div className="w-full border-t-1 mt-3"></div>
-        <div ref={projectsRef} className="scroll-mt-20">
+        <SectionDivider />
+        <div ref={projectsRef} className="scroll-mt-10 md:scroll-mt-20">
           <Projects />
         </div>
       </div>
     </div>
   );
+};
+
+const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    if (timeoutId) clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => func.apply(this, args), delay);
+  };
 };
 
 export default Home;

@@ -1,1 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0; 
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(35, 101, 241, 0.3), transparent);
+  top: 1%;
+  left: 20%;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(33, 150, 243, 0.3), transparent);
+  top: 8%;
+  right: 25%;
+}
+
+@media (max-width: 768px) {
+  .blob-1 {
+    width: 200px;
+    height: 200px;
+    top: 5%;
+    left: 2%;
+  }
+
+  .blob-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 5%;
+    right: 2%;
+  }
+}
+
