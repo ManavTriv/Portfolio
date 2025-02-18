@@ -2,13 +2,13 @@ import { Linkedin, Github, Mail, FileUser } from "lucide-react";
 
 const IntroCard = () => {
   return (
-    <div className="flex md:flex-row flex-col items-center justify-center mx-auto w-[90%]">
+    <div className="flex md:flex-row flex-col items-center justify-center mx-auto w-full">
       <div className="flex flex-col p-10 h-full md:w-[50%] w-full">
         <p className="font-secondary font-medium md:text-4xl text-3xl">
           hi i'm manav,
         </p>
         <p className="font-secondary font-medium md:text-4xl text-3xl">
-          i'm currently a student @ UQ
+          and i'm currently a student @ UQ
         </p>
         <div className="flex flex-col space-y-2 mt-10">
           <p className="font-secondary text-base pb-2 text-stone-800 ">
