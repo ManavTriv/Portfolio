@@ -1,3 +1,5 @@
+import { Linkedin, Github, Mail, FileUser } from "lucide-react";
+
 const IntroCard = () => {
   return (
     <div className="flex flex-row items-center justify-center mx-auto w-[90%] h-100 my-5">
@@ -10,17 +12,41 @@ const IntroCard = () => {
           <p className="font-secondary text-lg pb-2 text-stone-800 ">
             heres where you can find me
           </p>
-          <a className="font-secondary text-lg font-medium underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300">
-            linkedin
+          <a
+            href="https://github.com/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row items-center space-x-2 font-secondary text-lg font-medium underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300"
+          >
+            <Linkedin className="w-5 h-5 transition-all duration-300 text-inherit" />
+            <span>linkedin</span>
           </a>
-          <a className="font-secondary text-lg font-medium underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300">
-            github
+          <a
+            href="https://github.com/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row items-center space-x-2 font-secondary text-lg font-medium underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300"
+          >
+            <Github className="w-5 h-5 transition-all duration-300 text-inherit" />
+            <span>github</span>
           </a>
-          <a className="font-secondary text-lg font-medium underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300">
-            email
+          <a
+            href="https://github.com/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row items-center space-x-2 font-secondary text-lg font-medium underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300"
+          >
+            <Mail className="w-5 h-5 transition-all duration-300 text-inherit" />
+            <span>email</span>
           </a>
-          <a className="font-secondary text-lg font-medium underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300">
-            resume
+          <a
+            href="https://github.com/your-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row items-center space-x-2 font-secondary text-lg font-medium underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300"
+          >
+            <FileUser className="w-5 h-5 transition-all duration-300 text-inherit" />
+            <span>resume</span>
           </a>
         </div>
       </div>

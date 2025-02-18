@@ -1,5 +1,6 @@
 import "./styles/Home.css"
 import IntroCard from "./components/IntroCard";
+import { Ghost} from "lucide-react";
 
 const Home = () => {
     return (
@@ -20,8 +21,9 @@ export default Home
 const Navbar = () => {
     return (
       <div className="flex flex-row items-center justify-between w-full h-23 px-8">
-        <a className="font-secondary font-medium text-center text-lg cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300">
-          manav trivedi ☃️
+        <a className="flex flex-row items-center space-x-2 font-secondary font-medium text-center text-lg cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300">
+          <span>manav trivedi</span>
+          <Ghost className="w-5 h-5 transition-all duration-300 text-inherit" />
         </a>
         <div className="flex flex-row space-x-3">
           <a className="font-secondary font-medium text-lg underline decoration-indigo-300 underline-offset-5 cursor-pointer text-stone-800 hover:text-indigo-300 transition-all duration-300">
