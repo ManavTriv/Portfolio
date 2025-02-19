@@ -1,12 +1,12 @@
 import { useRef, useState, useEffect } from "react";
 import "./styles/Home.css";
-import IntroCard from "./components/IntroCard";
+import IntroCard from "./components/Intro";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Navbar from "./components/Navbar";
 
-const SectionDivider = () => <div className="w-full border-t-1 my-8" />;
+const SectionDivider = () => <div className="w-full border-t-1 my-10 border-stone-500" />;
 
 const Home = () => {
   const aboutRef = useRef(null);
@@ -61,6 +61,7 @@ const Home = () => {
           <div ref={projectsRef} className="scroll-mt-10 md:scroll-mt-20">
             <Projects />
           </div>
+          <SectionDivider />
         </div>
       </div>
     </div>
