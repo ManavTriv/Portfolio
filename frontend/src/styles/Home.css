@@ -23,19 +23,55 @@
   right: 25%;
 }
 
+/* Breakpoint for tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .blob-1 {
+    width: 300px;
+    height: 300px;
+    top: 3%;
+    left: 15%;
+  }
+
+  .blob-2 {
+    width: 250px;
+    height: 250px;
+    top: 10%;
+    right: 20%;
+  }
+}
+
+/* Breakpoint for tablets in portrait mode and larger phones */
 @media (max-width: 768px) {
   .blob-1 {
     width: 200px;
     height: 200px;
     top: 5%;
-    left: 2%;
+    left: 10%;
   }
 
   .blob-2 {
     width: 150px;
     height: 150px;
-    bottom: 5%;
-    right: 2%;
+    top: 15%;
+    right: 10%;
   }
 }
+
+/* Breakpoint for smaller phones */
+@media (max-width: 480px) {
+  .blob-1 {
+    width: 150px;
+    height: 150px;
+    top: 5%;
+    left: 5%;
+  }
+
+  .blob-2 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    right: 5%;
+  }
+}
+
 

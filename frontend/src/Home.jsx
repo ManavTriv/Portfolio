@@ -6,7 +6,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Navbar from "./components/Navbar";
 
-const SectionDivider = () => <div className="w-full border-t-1 mt-3" />;
+const SectionDivider = () => <div className="w-full border-t-1 my-8" />;
 
 const Home = () => {
   const aboutRef = useRef(null);
@@ -48,17 +48,19 @@ const Home = () => {
 
       <div className="flex flex-col w-[90%] xl:max-w-[1100px] items-center justify-center mx-auto pt-10 md:pt-20 relative z-10">
         <IntroCard />
-        <SectionDivider />
-        <div ref={aboutRef} className="scroll-mt-10 md:scroll-mt-20">
-          <About />
-        </div>
-        <SectionDivider />
-        <div ref={experienceRef} className="scroll-mt-10 md:scroll-mt-20">
-          <Experience />
-        </div>
-        <SectionDivider />
-        <div ref={projectsRef} className="scroll-mt-10 md:scroll-mt-20">
-          <Projects />
+        <div className="w-[95%]">
+          <SectionDivider />
+          <div ref={aboutRef} className="scroll-mt-10 md:scroll-mt-20">
+            <About />
+          </div>
+          <SectionDivider />
+          <div ref={experienceRef} className="scroll-mt-10 md:scroll-mt-20">
+            <Experience />
+          </div>
+          <SectionDivider />
+          <div ref={projectsRef} className="scroll-mt-10 md:scroll-mt-20">
+            <Projects />
+          </div>
         </div>
       </div>
     </div>
